@@ -28,6 +28,7 @@
     "@nestjs/platform-express": "^10.0.0",
     "@prisma/client": "^5.2.0",
     "bcryptjs": "^2.4.3",
+    "dayjs": "^1.11.9",
     "passport-jwt": "^4.0.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1",
@@ -35,6 +36,7 @@
     "zod-validation-error": "^1.5.0"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
     "@nestjs/cli": "^10.0.0",
     "@nestjs/schematics": "^10.0.0",
     "@nestjs/testing": "^10.0.0",
