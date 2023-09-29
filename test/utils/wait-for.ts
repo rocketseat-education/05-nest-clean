@@ -8,17 +8,17 @@
  * @param maxDuration Maximum wait time before rejecting
  */
 export async function waitFor(
-  assertions: () => void,
+  assertions: () => void | Promise<void>,
   maxDuration = 1000,
 ): Promise<void> {
   return new Promise((resolve, reject) => {
     let elapsedTime = 0
 
-    const interval = setInterval(() => {
+    const interval = setInterval(async () => {
       elapsedTime += 10
 
       try {
-        assertions()
+        await assertions()
         clearInterval(interval)
         resolve()
       } catch (err) {
